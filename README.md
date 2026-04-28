@@ -40,3 +40,16 @@ After this, users can run only `./run.ps1`.
 - `TetherPro/ui/` - CustomTkinter UI
 - `TetherPro/data/manager.py` - vault/storage logic
 - `TetherPro/core/` - Rust crypto module (PyO3)
+
+## 🤝 Contributing
+
+I welcome any help with the development of Tether Pro! If you want to suggest changes or fix a bug, please follow these steps:
+
+1. **Clone the repository** (via terminal or GitHub Desktop).
+2. **Create a new branch** for your changes.
+   - *Important:* Use the naming format `username_branch` (e.g., `smith_fix-encryption`). This makes it much easier for me to manage the project and identify the author of the changes.
+3. **Make your changes** and commit them.
+4. **Publish your branch** and create a **Pull Request** to the main branch.
+
+> [!IMPORTANT]
+> Pull Requests from branches named according to the `username_branch` standard will be prioritized for code review and merging!
