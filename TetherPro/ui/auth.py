@@ -1,3 +1,4 @@
+import customtkinter as ctk
 class AuthWindow(ctk.CTk):
     def __init__(self, mode="login"):
         super().__init__()
