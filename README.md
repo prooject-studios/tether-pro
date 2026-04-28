@@ -1,68 +1,42 @@
-# 🛡️ Tether Pro
-### *Hardware-Bound Identity & Password Management System*
+﻿# Tether Pro
 
-![Security](https://img.shields.io/badge/Security-High-red?style=for-the-badge)
-![Language](https://img.shields.io/badge/Rust-Core-orange?style=for-the-badge)
-![Language](https://img.shields.io/badge/Python-UI-blue?style=for-the-badge)
+Tether Pro is a desktop password manager (Python UI + Rust crypto core).
 
-**Tether Pro** — это менеджер паролей нового поколения, реализующий концепцию **«физического якоря»**. В отличие от классических решений, Tether Pro делает кражу базы данных бесполезной, так как критически важная часть ключа дешифрования физически отделена от устройства.
+## Quick start (Windows, from fresh GitHub clone)
 
----
-
-## 🛠 Технологический стек
-
-Проект построен на гибридной архитектуре для достижения максимального баланса между скоростью разработки и безопасностью:
-
-* **Core (Ядро):** `Rust`. Отвечает за всю криптографическую логику, прямое взаимодействие с USB-устройствами и безопасное управление памятью.
-* **Logic & Interface:** `Python`. Управляет бизнес-логикой приложения, базой данных и предоставляет пользовательский интерфейс.
-* **Bridge:** `PyO3 / Maturin`. Обеспечивает высокоскоростное взаимодействие между Python и скомпилированным Rust-модом.
-
----
-
-## 🔐 Протокол шифрования
-
-Безопасность Tether Pro базируется на многофакторной деривации ключа. Для расшифровки данных система требует одновременного наличия четырех элементов:
-
-### Формула деривации ключа (KDF):
-```text
-Key = Argon2id(
-    Master_Password  + 
-    Hardware_Salt    + 
-    Component_ID
-)
+1. Clone repository:
+```powershell
+git clone https://github.com/<your-username>/tether-pro.git
+cd tether-pro/TetherPro
 ```
 
-### Составляющие защиты:
-1.  **Master Password:** Строка, которую знает только пользователь. Не хранится в системе.
-2.  **Hardware Salt (USB):** Уникальный массив данных, хранящийся на внешней флешке. Без подключения этого «ключа» процесс дешифровки не начнется.
-3.  **Component ID:** Уникальный идентификатор записи в базе данных. Гарантирует, что даже два одинаковых пароля в базе будут зашифрованы разными ключами.
-4.  **AES-256-GCM:** Протокол симметричного шифрования с проверкой целостности данных.
+2. Run one-time setup:
+```powershell
+.\setup.ps1
+```
 
----
+3. Start app:
+```powershell
+.\run.ps1
+```
 
-## 🏗 Архитектура системы
+After this, users can run only `./run.ps1`.
 
-| Слой | Технология | Зона ответственности |
-| :--- | :--- | :--- |
-| **User Interface** | Python (CustomTkinter/PyQt) | Визуализация, ввод данных, управление сессией. |
-| **Data Layer** | SQLite (Encrypted) | Хранение зашифрованных контейнеров и метаданных. |
-| **Crypto Engine** | **Rust (Ring / Argon2)** | Хеширование, генерация ключей, шифрование RAM. |
-| **Hardware Link** | Rust (LibUSB) | Верификация наличия физической флешки-ключа. |
+## What setup.ps1 does
 
----
+- creates `.venv`
+- installs Python dependencies
+- builds and installs Rust extension `tether_core` with `maturin develop --release`
 
-## 🌟 Ключевые особенности
+## Requirements
 
-* **Memory Safety (Zeroize):** Благодаря Rust, все секретные данные (ключи, мастер-пароли) принудительно затираются в оперативной памяти сразу после использования.
-* **Physical 2FA:** Ваша флешка — это физический ключ. Нет флешки — нет доступа к данным, даже если известен мастер-пароль.
-* **Anti-Bruteforce:** Использование алгоритма **Argon2id** делает попытки подбора пароля на GPU или ASIC-майнерах экономически невыгодными и крайне медленными.
-* **Zero-Knowledge:** Приложение ничего не знает о ваших паролях. Все преобразования происходят локально; ключи никогда не покидают пределы вашей RAM.
+- Python 3.10+
+- Rust toolchain (`rustup`, `cargo`)
+- Windows PowerShell
 
----
+## Project layout
 
-## ⚠️ Важное примечание по безопасности
-
-> **Потеря USB-носителя:** Поскольку соль, хранящаяся на флешке, является уникальной и не хранится в самой программе, её утеря при отсутствии резервной копии приведет к **перманентной потере доступа** к базе паролей. Рекомендуется хранить дубликат файла соли в защищенном автономном хранилище.
-
----
-**Разработчик:** Prooject
+- `TetherPro/main.py` - app entry point
+- `TetherPro/ui/` - CustomTkinter UI
+- `TetherPro/data/manager.py` - vault/storage logic
+- `TetherPro/core/` - Rust crypto module (PyO3)
