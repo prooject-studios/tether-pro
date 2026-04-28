@@ -2,6 +2,10 @@
 
 Tether Pro is a desktop password manager (Python UI + Rust crypto core).
 
+![Security](https://img.shields.io/badge/Security-High-red?style=for-the-badge)
+![Language](https://img.shields.io/badge/Rust-Core-orange?style=for-the-badge)
+![Language](https://img.shields.io/badge/Python-UI-blue?style=for-the-badge)
+
 ## Quick start (Windows, from fresh GitHub clone)
 
 1. Clone repository:
