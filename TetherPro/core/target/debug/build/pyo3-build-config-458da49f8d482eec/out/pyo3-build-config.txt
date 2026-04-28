@@ -1,0 +1,10 @@
+implementation=CPython
+version=3.14
+shared=true
+abi3=false
+lib_name=python314
+lib_dir=E:\Python314\libs
+executable=C:\Users\Loocik\Documents\GitHub\tether-pro\TetherPro\core\.venv\Scripts\python.exe
+pointer_width=64
+build_flags=
+suppress_build_script_link_lines=false

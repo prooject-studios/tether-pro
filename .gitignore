@@ -1,0 +1,17 @@
+﻿# Root ignores
+.vscode/
+.idea/
+.DS_Store
+
+# Python
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/.venv/
+**/venv/
+
+# Rust
+**/target/
+
+# Local data
+TetherPro/vault.tether
