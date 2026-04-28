@@ -1,0 +1,14 @@
+C:\Users\Loocik\Documents\GitHub\tether-pro\TetherPro\core\target\debug\deps\pyo3_build_config-524f6faa7010c6eb.d: C:\Users\Loocik\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\pyo3-build-config-0.20.3\src\lib.rs C:\Users\Loocik\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\pyo3-build-config-0.20.3\src\errors.rs C:\Users\Loocik\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\pyo3-build-config-0.20.3\src\impl_.rs C:\Users\Loocik\Documents\GitHub\tether-pro\TetherPro\core\target\debug\build\pyo3-build-config-458da49f8d482eec\out/pyo3-build-config-file.txt C:\Users\Loocik\Documents\GitHub\tether-pro\TetherPro\core\target\debug\build\pyo3-build-config-458da49f8d482eec\out/pyo3-build-config.txt
+
+C:\Users\Loocik\Documents\GitHub\tether-pro\TetherPro\core\target\debug\deps\libpyo3_build_config-524f6faa7010c6eb.rlib: C:\Users\Loocik\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\pyo3-build-config-0.20.3\src\lib.rs C:\Users\Loocik\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\pyo3-build-config-0.20.3\src\errors.rs C:\Users\Loocik\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\pyo3-build-config-0.20.3\src\impl_.rs C:\Users\Loocik\Documents\GitHub\tether-pro\TetherPro\core\target\debug\build\pyo3-build-config-458da49f8d482eec\out/pyo3-build-config-file.txt C:\Users\Loocik\Documents\GitHub\tether-pro\TetherPro\core\target\debug\build\pyo3-build-config-458da49f8d482eec\out/pyo3-build-config.txt
+
+C:\Users\Loocik\Documents\GitHub\tether-pro\TetherPro\core\target\debug\deps\libpyo3_build_config-524f6faa7010c6eb.rmeta: C:\Users\Loocik\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\pyo3-build-config-0.20.3\src\lib.rs C:\Users\Loocik\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\pyo3-build-config-0.20.3\src\errors.rs C:\Users\Loocik\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\pyo3-build-config-0.20.3\src\impl_.rs C:\Users\Loocik\Documents\GitHub\tether-pro\TetherPro\core\target\debug\build\pyo3-build-config-458da49f8d482eec\out/pyo3-build-config-file.txt C:\Users\Loocik\Documents\GitHub\tether-pro\TetherPro\core\target\debug\build\pyo3-build-config-458da49f8d482eec\out/pyo3-build-config.txt
+
+C:\Users\Loocik\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\pyo3-build-config-0.20.3\src\lib.rs:
+C:\Users\Loocik\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\pyo3-build-config-0.20.3\src\errors.rs:
+C:\Users\Loocik\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\pyo3-build-config-0.20.3\src\impl_.rs:
+C:\Users\Loocik\Documents\GitHub\tether-pro\TetherPro\core\target\debug\build\pyo3-build-config-458da49f8d482eec\out/pyo3-build-config-file.txt:
+C:\Users\Loocik\Documents\GitHub\tether-pro\TetherPro\core\target\debug\build\pyo3-build-config-458da49f8d482eec\out/pyo3-build-config.txt:
+
+# env-dep:CARGO_PKG_VERSION=0.20.3
+# env-dep:OUT_DIR=C:\\Users\\Loocik\\Documents\\GitHub\\tether-pro\\TetherPro\\core\\target\\debug\\build\\pyo3-build-config-458da49f8d482eec\\out
