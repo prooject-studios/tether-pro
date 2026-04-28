@@ -1,0 +1,17 @@
+[package]
+name = "tether_core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "tether_core"
+crate-type = ["cdylib"] # Важно для создания Python-модуля
+
+[dependencies]
+# Связка с Python
+pyo3 = { version = "0.20", features = ["extension-module"] }
+# Криптография
+argon2 = "0.5"
+zeroize = { version = "1.7", features = ["derive"] }
+# Для работы с путями и дисками
+sysinfo = "0.30"
